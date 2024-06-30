@@ -302,13 +302,7 @@ if (IXWEBSOCKET_INSTALL)
 endif()
 
 if (USE_WS OR USE_TEST)
-  include(FetchContent)
-  FetchContent_Declare(spdlog
-      GIT_REPOSITORY "https://github.com/gabime/spdlog"
-      GIT_TAG "v1.8.0"
-      GIT_SHALLOW 1) 
-
-  FetchContent_MakeAvailable(spdlog)
+  find_package(spdlog REQUIRED)
 
   if (USE_WS)
     add_subdirectory(ws)

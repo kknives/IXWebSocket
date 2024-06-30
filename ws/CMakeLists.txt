@@ -31,6 +31,6 @@ add_executable(ws
 # library with the most dependencies come first
 target_link_libraries(ws ixwebsocket)
 
-target_link_libraries(ws spdlog)
+target_link_libraries(ws spdlog::spdlog)
 
 install(TARGETS ws RUNTIME DESTINATION bin)
